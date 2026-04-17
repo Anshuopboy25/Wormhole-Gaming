@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Wormhole Gaming | Chaos & Skill Minecraft</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <canvas id="bg-canvas"></canvas>
+  <div id="custom-cursor"></div>
+
+  <!-- Popup (on load + exit intent) -->
+  <div id="globalPopup" class="popup-overlay">
+    <div class="popup-card">
+      <h2>🚀 Join Wormhole Gaming</h2>
+      <p>Don’t miss viral shorts & chaos gameplay 💀</p>
+      <a href="https://discord.gg/Sm9zBDrGV6" target="_blank" class="btn btn-primary">Join Discord</a>
+      <br>
+      <button class="close-popup-btn" id="closePopupBtn">Close →</button>
+    </div>
+  </div>
+
+  <!-- Sticky Discord Button -->
+  <a href="https://discord.gg/Sm9zBDrGV6" target="_blank" class="sticky-discord" aria-label="Discord">💬</a>
+
+  <div class="main">
+    <header>
+      <div class="logo-wrapper">
+        <!-- ⚠️ REPLACE THIS WITH YOUR ACTUAL IMAGE PATH -->
+        <img src="C:/Users/ANSHU/Pictures/yt/big.png (1).jpg" 
+             alt="Wormhole Gaming Logo" 
+             class="logo"
+             onerror="this.src='https://placehold.co/400x400/2a1a3a/c77dff?text=WORMHOLE'">
+      </div>
+      <h1>Wormhole Gaming</h1>
+      <p class="tagline">Shorts That Break Reality 🚀</p>
+      <p id="typing"></p>
+      <div class="button-group">
+        <a href="https://youtube.com/@wormholegaminggg?si=PPsPUcQHWBUBnrN_" target="_blank" class="btn">▶ YouTube</a>
+        <a href="https://discord.gg/Sm9zBDrGV6" target="_blank" class="btn">💬 Discord</a>
+      </div>
+      <p class="sub-count">🔥 <span id="subscriberCount">Loading...</span> Subscribers</p>
+    </header>
+
+    <!-- ABOUT SECTION (split cards) -->
+    <section class="fade-up">
+      <h2>⚡ About Wormhole Gaming</h2>
+      <div class="about-split">
+        <div class="about-feature">
+          <div class="emoji-big">💀🌀</div>
+          <h3>Chaos + Skill Collide</h3>
+          <p>Not scripted, raw Minecraft mayhem. Every clip unpredictable, every moment intense.</p>
+        </div>
+        <div class="about-feature">
+          <div class="emoji-big">🚀🎬</div>
+          <h3>Shorts That Hook Instantly</h3>
+          <p>2-second grabs, high energy edits — made for rewatching & sharing.</p>
+        </div>
+        <div class="about-feature">
+          <div class="emoji-big">⚡🔥</div>
+          <h3>No Boring Grinding</h3>
+          <p>Entertainment first, crazy plays, insane stunts. Real content that sticks.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY SUBSCRIBE -->
+    <section class="fade-up">
+      <h2>💀 Why Subscribe</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Instant Hook</h3>
+          <p>First 2 seconds decide everything — our edits make you stay.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">💀</div>
+          <h3>Real Chaos</h3>
+          <p>No fake reactions. Pure unpredictable gameplay.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📈</div>
+          <h3>Rewatchable Content</h3>
+          <p>Every short & video feels fresh — endless entertainment.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LATEST VIDEO -->
+    <section class="fade-up">
+      <h2>🎥 Latest Banger</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/D0x3_VMTYXs" title="Wormhole Gaming Latest Video" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- TOP SHORTS GRID (professional) -->
+    <section class="fade-up">
+      <h2>🚀 Viral Shorts</h2>
+      <div class="shorts-grid">
+        <div class="short-card"><iframe src="https://www.youtube.com/embed/sUCOYqF4RM8" title="Short 1"></iframe></div>
+        <div class="short-card"><iframe src="https://www.youtube.com/embed/zfasiUjiHAA" title="Short 2"></iframe></div>
+        <div class="short-card"><iframe src="https://www.youtube.com/embed/VZEq4EFyAdE" title="Short 3"></iframe></div>
+        <div class="short-card"><iframe src="https://www.youtube.com/embed/hdMXsfQ0GMw" title="Short 4"></iframe></div>
+        <div class="short-card"><iframe src="https://www.youtube.com/embed/Ez11Bf9LLuc" title="Short 5"></iframe></div>
+      </div>
+    </section>
+
+    <!-- COMMUNITY SECTION -->
+    <section class="fade-up">
+      <div class="community-box">
+        <h2>💬 Wormhole Community</h2>
+        <p>Join the most chaotic, friendly & skilled Minecraft fam. Play together, share clips, and dominate.</p>
+        <div class="member-count">
+          👥 <span id="discordMemberCount">2,847</span> Active Gamers
+        </div>
+        <a href="https://discord.gg/Sm9zBDrGV6" target="_blank" class="btn btn-primary" style="margin-top: 1rem;">Join Discord →</a>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
