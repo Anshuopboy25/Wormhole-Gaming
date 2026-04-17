@@ -12,23 +12,29 @@ typeWriter();
 
 // REAL SUBSCRIBER COUNT (via YouTube API fallback)
 async function fetchSubscribers() {
-  const channelHandle = "@wormholegaminggg";
-  const channelUrl = `https://yt.lemnoslife.com/channels?handle=${channelHandle.substring(1)}&part=statistics`;
+  const apiKey = "AIzaSyC27EAkroJefRl5EM4FqdWVQYFgfclL-8Q"; // 👈 yaha apni key daal
+  const channelId = "UCrSFXX78kEgocnZ5rjZwJfw"; // 👈 yaha UC wala ID daal
+
+  const url = `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${channelId}&key=${apiKey}`;
+
   try {
-    const response = await fetch(channelUrl);
-    if (response.ok) {
-      const data = await response.json();
-      const subCount = data?.items?.[0]?.statistics?.subscriberCount;
-      if (subCount) {
-        document.getElementById("subscriberCount").innerText = parseInt(subCount).toLocaleString();
-        return;
-      }
+    const response = await fetch(url);
+    const data = await response.json();
+
+    const subCount = data?.items?.[0]?.statistics?.subscriberCount;
+
+    if (subCount) {
+      document.getElementById("subscriberCount").innerText =
+        Number(subCount).toLocaleString();
+    } else {
+      document.getElementById("subscriberCount").innerText = "N/A";
     }
-    throw new Error("fallback");
+
   } catch (err) {
-    document.getElementById("subscriberCount").innerText = "455";
+    document.getElementById("subscriberCount").innerText = "N/A";
   }
 }
+
 fetchSubscribers();
 
 // DISCORD MEMBER COUNT (dynamic fake but realistic)
