@@ -26,7 +26,7 @@ async function fetchSubscribers() {
     }
     throw new Error("fallback");
   } catch (err) {
-    document.getElementById("subscriberCount").innerText = "4.2K";
+    document.getElementById("subscriberCount").innerText = "455";
   }
 }
 fetchSubscribers();
